@@ -1,0 +1,1 @@
+document.querySelectorAll('[data-filter]').forEach(input=>{input.addEventListener('input',()=>{const table=document.getElementById(input.dataset.filter);if(!table)return;const q=input.value.toLocaleLowerCase();table.querySelectorAll('tbody tr').forEach(row=>{row.hidden=!row.innerText.toLocaleLowerCase().includes(q)})})});
